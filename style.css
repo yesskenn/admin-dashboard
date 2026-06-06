@@ -1,4 +1,8 @@
 
+/*font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* josh comeau's coool css reset */
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
@@ -56,62 +60,178 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*font import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-
 body {
     font-family: 'Inter', Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 25% 1fr 1fr 1fr;
-    grid-template-rows: (4, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+        background-color: #ebebeb;
+
 
 }
+
 
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / 5;
-    background-color: slategrey;
+    background-color: #fafafa;
     display: grid;
-    grid-template-columns: 35% 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     height: 12em;
-    
+    grid-template-areas: 
+    "top-header-row" "top-header-row"
+    "greeting" "greeting";
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.2) 0px 3px 7px -3px;
 }
 
+.avatar{
+    max-width: 80%;
+    height: auto;
+}
+.top-header-row {
+    grid-template-areas: "top-header-row";
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-template-rows: 1fr;
+
+    grid-template-areas: 
+    "search" "user-info";
+}
+
+.greeting {
+    grid-template-areas: "greeting";
+    display: grid;
+    grid-column: 1 / span 4;
+   
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;    
+    grid-template-areas: 
+    "user-greeting" "buttons";
+}
 .search-container {
-    
-    border: solid 1px red;
     display: inline-flex;
+    grid-template-areas: "search";
+    align-items: center;
+    justify-content: center;
+    margin-left: 1em;
+    gap: 1rem;
 }
 
-.small-user-info {
+.small-user-info{
+    grid-template-areas: "user-info";
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.small-user-info > .avatar-box {
+  width: 45px;
+  height: 45px;
+}
+
+.user-greeting{
+    grid-template-areas: "user-greeting";
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    gap: 2rem;
+  
+}
+.btns{
+    grid-template-areas: "buttons";
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: content;
+    justify-content: center;
+    
+    align-content: center;
+    
+}
+.sidebar {
+    background-color: rgb(74, 131, 151);
+    grid-area: 1 / 1 / 4 / 2;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        font-size: 0.75rem;
+    }
     
 }
 
-.sidebar {
-    background-color: steelblue;
-    grid-area: 1 / 1 / 4 / 2;
+#logo{
+    display:grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+.action-btn{
+    color: white;
+    background-color: rgb(74, 131, 151);
+    border-radius: 1em;
+    width: 8rem;
+    height: 2rem;
+    font-weight: 700;
+    text-align: center;
+    align-content:center;
+}
+h1 {
+    font-size: 2rem;
+    font-family: 'Work Sans', Helvetica, monospace;
+    font-weight: 800;
+    font-style: oblique;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 1rem;
+    }
+    ul {
+  
+    margin-left: -1.5rem;
+    
+}
 }
 
 ul {
     list-style-type: none;
+    margin-left:-2.6rem;
     
 }
 
 main {
     grid-area: 2 / 2 / 3 / 5;
     display: grid;
-    grid-template-columns: 75% 1fr;
-    background-color: #ebebeb;
-  
+    grid-template-columns: 70% 1fr;
+    gap: 1rem;
+    margin: 1rem;
     
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 1em;
 }
 
@@ -119,20 +239,39 @@ main {
     border: solid 1px greenyellow;
     background-color: #fff;
     width: 100%;
-}
-
-.sub-side {
-    margin: 10px;
+    height: auto;
+    border-radius: 2%;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 0.5em;
+    gap: 1em;
+    padding: 1em;
+    overflow:auto;
+   
+
+}
+
+.project > p {
+     font-size: 0.85em;
+}
+.socials {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   gap: 1em;
+    justify-content: flex-end;
+}
+.sub-side {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 1em;
     
+    padding-top: 0.5em;
+        
 }
 
 .announcements {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
     background-color: #fff;
     border-radius: 2%;
     justify-content: center;
@@ -144,22 +283,93 @@ main {
     border-bottom: solid 1px plum;
     padding: 0.1em;
     margin: 4px;
-    height: 150px;
+    
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap:
 
 }
 .announcement > h3{
     font-size: 1.15em;
-    color: rgb(156, 117, 156);
-     font-weight: 700;
+    color: rgb(132, 80, 132); /* rgb(156, 117, 156); */
+    font-weight: 700;
 }
 
  .announcement > p{
     font-size: 0.85em;
-    color: #595959;
+    color: #383838;
+    padding-bottom: 1em;
+    
    
+}
+
+.avatar-box {
+    width: 45px;
+    height: 45px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .trending {
     border-radius: 2%;
-    background-color: white;}
+    background-color: white;
+    padding: 1em;
+    height:fit-content;
+    
+  
+
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2em;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+    margin: auto;
+    margin: 1em auto;
+
+    
+}
+
+.trend-info {
+font-size: small;
+color: #333333;
+}
+
+@media (max-width: 700px){
+    body,
+    main
+        {
+        grid-template-columns: 1fr;
+        }
+  
+    .header, 
+    .top-header-row
+        {
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+     }
+      .user-greeting {
+        display: none;
+      }
+      .greeting {
+        grid-template-columns: auto;
+      }
+      .btns{
+        justify-content: center;
+        gap: 20px;
+       
+      }
+        .projects {
+            grid-template-columns: 1fr;
+        }
+}

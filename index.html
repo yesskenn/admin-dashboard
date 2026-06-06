@@ -12,38 +12,56 @@
 </head>
 <body>
     <div class="header">
-        <div class="search-container">
-            <i class="mdi mdi-magnify"></i>
-            <div class="search-bar" style="border: solid 1px lightsteelblue; border-radius: 22px; width:300px; height: 20px; background-color: lightsteelblue;"></div>
+        
+        <div class="top-header-row">
+            <div class="search-container">
+                <i class="mdi mdi-magnify"></i>
+                <div class="search-bar" style="border: solid 1px lightsteelblue; border-radius: 22px; width:500px; height: 20px; background-color: lightsteelblue;"></div>
+            </div>
+            <div class="small-user-info">
+                <i class="mdi mdi-bell-badge"></i>
+                <div class="avatar-box">
+                    <img src="/assets/jellyfish.png" alt="kawaii jellyfish avatar" class="avatar"></img>
+                </div>
+                <p><strong>Morgan Oakley</strong></p>
+            </div>
         </div>
-        <div class="small-user-info">
-            <i class="mdi mdi-bell-badge"></i>
-            <img src="" alt="avatar"></img>
-            <p><strong>morgan oakley</strong></p>
-        </div>
+        <div class="greeting">
+            <div class="user-greeting">
+                <div class="avatar-box">
+                <img src="/assets/jellyfish.png" alt="kawaii jellyfish avatar" class="avatar"></img>
+                </div>
+                <h2><span style="font-size: 1rem;">Hi there,</span><br/>Morgan Oakley (@morgan)</h2>
+            </div>
+            <div class="btns">
+                <div class="action-btn">New</div>
+                <div class="action-btn">Upload</div>
+                <div class="action-btn">Share</div> 
+            </div>
+        </div>        
     </div>
+
     <div class="sidebar">
         <nav id="nav">
-            <div id="logo"></div>
+            <div id="logo">     
+                <i class="mdi mdi-microsoft-windows"></i>
+                <h1>Dashboard</h1>
+            </div>
             <ul>
-                <li id="item1">Home</li>
-                <li id="item2">Profile</li>
-                <li id="item3">Messages</li>
-                <li id="item4">History</li>
-                <li id="item5">Tasks</li>
-                <li id="item6">Communities</li>
+                <li id="item1"><i class="mdi mdi-home"></i> Home</li>
+                <li id="item2"><i class="mdi mdi-account-box"></i> Profile</li>
+                <li id="item3"><i class="mdi mdi-message"></i> Messages</li>
+                <li id="item4"><i class="mdi mdi-clock"></i> History</li>
+                <li id="item5"><i class="mdi mdi-check-circle"></i> Tasks</li>
+                <li id="item6"><i class="mdi mdi-home-group"></i> Communities</li>
             </ul>
 
             <ul>
-                <li id="settings1">Settings</li>
-                <li id="settings2">Support</li>
-                <li id="settings3">Privacy</li>
+                <li id="settings1"><i class="mdi mdi-cog"></i> Settings</li>
+                <li id="settings2"><i class="mdi mdi-help-box"></i> Support</li>
+                <li id="settings3"><i class="mdi mdi-shield-check"></i> Privacy</li>
             </ul>
-            <i class="mdi mdi-home"></i>
-            <i class="mdi mdi-account"></i>
-            <i class="mdi mdi-share-variant"></i>
-            <i class="mdi mdi-bell-ring"></i>
-
+          
         </nav>
     </div>
 <main>
@@ -96,6 +114,7 @@
 
     </div>
     <div class="sub-side">
+        <div class="announcement-container">
         <h2>Announcements</h2>
         <div class="announcements">
             
@@ -107,36 +126,55 @@
                 <h3>Community Share Day</h3>
                 <p>OK, yeah, no, I did not write this… OK, like, I didn’t even choose this font! It’s horrible. I don’t want to brag, but Us Weekly once described me as ‘up for anything.' </p>
             </div>
-            <div class="announcement">
+            <div class="announcement" style="border-bottom: 0px;">
                 <h3>Updated Privacy Policy</h3>
                 <p>If those bunnies feel exploited even a little bit, I am pulling the plug. I haven’t bedazzled anything since I was 22. I’m incapable of faking sincerity. There’s nothing here but hot singles in my area. </p>
             </div>
         </div>
-        <h2>Trending</h2>
-        <div class="trending">
-            
-            <div id="trend1">
-                <img src="" alt="">
-                <h3>@tegan</h3>
-                <p>World Peace Builder</p>
-            </div>
-            <div id="trend2">
-                <img src="" alt="">
-                <h3>@morgan</h3>
-                <p>Super Cool Project</p>
-            </div>
-            <div id="trend3">
-                <img src="" alt="">
-                <h3>@kendall</h3>
-                <p>Life Changing App</p>
-            </div>
-
-            <div id="trend4">
-                <img src="" alt="">
-                <h3>@alex</h3>
-                <p>No Traffic Maker</p>
-            </div>
         </div>
+        <div class="trend-container">
+            <h2>Trending</h2>
+            <div class="trending">
+                
+                <div class="trend">
+                    <div class="avatar-box">
+                        <img src="/assets/crab.png" alt="kawaii crab" class="avatar">
+                    </div>
+                    <div class="trend-info">
+                        <h3>@tegan</h3>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+                <div class="trend">
+                    <div class="avatar-box">
+                        <img src="/assets/jellyfish.png" alt="kawaii jellyfish" class="avatar">
+                    </div>
+                    <div class="trend-info">
+                        <h3>@morgan</h3>
+                        <p>Super Cool Project</p>
+                    </div>
+                </div>
+                <div class="trend">
+                    <div class="avatar-box">
+                        <img src="/assets/octopus.png" alt="kawaii octopus" class="avatar">
+                    </div>
+                    <div class="trend-info">
+                        <h3>@kendall</h3>
+                        <p>Life Changing App</p>
+                    </div>
+                </div>
+
+                <div class="trend">
+                    <div class="avatar-box">
+                        <img src="/assets/sun.png" alt="kawaii sun" class="avatar">
+                    </div>
+                    <div class="trend-info">
+                        <h3>@alex</h3>
+                        <p>No Traffic Maker</p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
 </main>
 </body>
