@@ -31,8 +31,8 @@ So far, it's going okay. I really like using grid-area with the naming system an
 
 ## Live Demo
 
-Not Yet
+[Live Admin Dashboard](https://yessikenney.com/admin-dashboard)
 
 ## Screenshot
 
-Not Yet
+![Admin Dashboard screenshot with sidebar, header, announcements column, and main projects area creating with CSS Grid](/assets/Admin%20Dashboard.png)

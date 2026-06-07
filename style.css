@@ -283,7 +283,6 @@ main {
     border-bottom: solid 1px plum;
     padding: 0.1em;
     margin: 4px;
-    
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
