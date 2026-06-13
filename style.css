@@ -61,7 +61,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body {
-    font-family: 'Inter', Helvetica, sans-serif;
+    font-family: 'Work Sans', Helvetica, sans-serif;
+    font-weight: 500;
     display: grid;
     grid-template-columns: 25% 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fill, 1fr);
@@ -70,7 +71,35 @@ body {
 
 }
 
+h1 {
+    font-size: 2rem;
+    font-family: 'Work Sans', Helvetica, monospace;
+    font-weight: 800;
+    font-style: oblique;
+    text-transform: uppercase;
+}
+h2{
+    font-family: 'Work Sans', Helvetica, monospace;
+    font-weight: 500;
+    font-style: oblique;
+    color: #222;
+}
 
+h3{
+    font-family: 'Space Mono', Helvetica, monospace;
+    font-size: 1.24em;
+    color: #4d8296;
+    font-weight: 600;
+
+}
+
+.project > h3{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #4d8rgb(69, 118, 136)
+
+
+}
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / 5;
@@ -154,23 +183,48 @@ body {
     align-content: center;
     
 }
+
+
+
 .sidebar {
     background-color: rgb(74, 131, 151);
     grid-area: 1 / 1 / 4 / 2;
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 2rem;
-    padding-top: 1em;
+   
 }
 
-@media screen and (max-width: 768px) {
-    .sidebar {
-        font-size: 0.75rem;
-    }
-    
+#mobile-sidebar {
+    background-color: rgb(74, 131, 151);
+    grid-area: 1 / 1 / 4 / 2;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+
+nav {
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding-top: 1em;
+    line-height: 2.5em;
+
+}
+
+.nav-toggle-label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 2;    
+    display:none;
+}
+
+.w3-button {
+    display: none;
 }
 
 #logo{
@@ -180,6 +234,34 @@ body {
     gap: 10px;
     justify-content: center;
 }
+
+@media screen and (max-width: 868px) {
+    .w3-button {
+        display: block;
+    }  
+    .nav-desktop {
+            display: none;
+        }
+
+    #mobile-sidebar {
+        display: block;
+        width: 25vw;
+    }
+    .nav-mobile{
+     font-size:small;  
+   
+    }
+  
+    #logo {
+        display: none;
+    }
+
+
+
+
+}
+
+
 
 
 
@@ -193,13 +275,7 @@ body {
     text-align: center;
     align-content:center;
 }
-h1 {
-    font-size: 2rem;
-    font-family: 'Work Sans', Helvetica, monospace;
-    font-weight: 800;
-    font-style: oblique;
-    text-transform: uppercase;
-}
+
 
 @media screen and (max-width: 768px) {
 
@@ -343,7 +419,7 @@ font-size: small;
 color: #333333;
 }
 
-@media (max-width: 700px){
+@media (max-width: 768px){
     body,
     main
         {
@@ -353,19 +429,43 @@ color: #333333;
     .header, 
     .top-header-row
         {
-        grid-template-columns: auto;
-        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 1fr);
+        grid-template-rows: 1fr;
+        gap:1em;
         align-items: center;
+        justify-content: center;
+        
+       
+    /* grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)); */
+
      }
       .user-greeting {
         display: none;
       }
-      .greeting {
-        grid-template-columns: auto;
-      }
-      .btns{
+       .search-bar {
+        display: none;
+    }
+    .search-container {
+        align-items: right;
+        border: solid 1px #333333;
+        border-radius: 1em;
+        padding: 2px;
+        justify-content: right;   }
+      
+    .greeting {
+        grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
+        align-items: center;
         justify-content: center;
-        gap: 20px;
+        margin: 0 auto;
+    }      
+       .small-user-info {
+            grid-template-columns: repeat(auto-fill, 1fr);
+       }
+
+      .btns{
+       margin: 0 auto;
+       gap: 1em;
+        
        
       }
         .projects {

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
 />
-<link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+    <link rel="stylesheet" href="style.css"/>
+
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -21,7 +24,7 @@
             <div class="small-user-info">
                 <i class="mdi mdi-bell-badge"></i>
                 <div class="avatar-box">
-                    <img src="/assets/jellyfish.png" alt="kawaii jellyfish avatar" class="avatar"></img>
+                    <img src="assets/jellyfish.png" alt="kawaii jellyfish avatar" class="avatar"></img>
                 </div>
                 <p><strong>Morgan Oakley</strong></p>
             </div>
@@ -29,9 +32,9 @@
         <div class="greeting">
             <div class="user-greeting">
                 <div class="avatar-box">
-                <img src="/assets/jellyfish.png" alt="kawaii jellyfish avatar" class="avatar"></img>
+                <img src="assets/jellyfish.png" alt="kawaii jellyfish avatar" class="avatar"></img>
                 </div>
-                <h2><span style="font-size: 1rem;">Hi there,</span><br/>Morgan Oakley (@morgan)</h2>
+                <h2><span style="font-size: 1rem;">Hi there,</span> Morgan Oakley (@morgan)</h2>
             </div>
             <div class="btns">
                 <div class="action-btn">New</div>
@@ -43,10 +46,12 @@
 
     <div class="sidebar">
         <nav id="nav">
+          
             <div id="logo">     
                 <i class="mdi mdi-microsoft-windows"></i>
                 <h1>Dashboard</h1>
             </div>
+            <div class="nav-desktop">
             <ul>
                 <li id="item1"><i class="mdi mdi-home"></i> Home</li>
                 <li id="item2"><i class="mdi mdi-account-box"></i> Profile</li>
@@ -61,6 +66,26 @@
                 <li id="settings2"><i class="mdi mdi-help-box"></i> Support</li>
                 <li id="settings3"><i class="mdi mdi-shield-check"></i> Privacy</li>
             </ul>
+            </div>  
+              <button class="w3-button" onclick="w3_open()"> <i class="mdi mdi-menu"></i>
+            </button>
+             <div class="nav-mobile w3-animate-left" id="mobile-sidebar" style="display:none">
+                <button onclick="w3_close()" class="w3-button w3-margin-top w3-border w3-medium">Close &times;</button>
+                <ul>
+                <li id="item1"><i class="mdi mdi-home"></i> Home</li>
+                <li id="item2"><i class="mdi mdi-account-box"></i> Profile</li>
+                <li id="item3"><i class="mdi mdi-message"></i> Messages</li>
+                <li id="item4"><i class="mdi mdi-clock"></i> History</li>
+                <li id="item5"><i class="mdi mdi-check-circle"></i> Tasks</li>
+                <li id="item6"><i class="mdi mdi-home-group"></i> Communities</li>
+            </ul>
+
+            <ul>
+                <li id="settings1"><i class="mdi mdi-cog"></i> Settings</li>
+                <li id="settings2"><i class="mdi mdi-help-box"></i> Support</li>
+                <li id="settings3"><i class="mdi mdi-shield-check"></i> Privacy</li>
+            </ul>
+            </div>  
           
         </nav>
     </div>
@@ -138,7 +163,7 @@
                 
                 <div class="trend">
                     <div class="avatar-box">
-                        <img src="/assets/crab.png" alt="kawaii crab" class="avatar">
+                        <img src="assets/crab.png" alt="kawaii crab" class="avatar">
                     </div>
                     <div class="trend-info">
                         <h3>@tegan</h3>
@@ -147,7 +172,7 @@
                 </div>
                 <div class="trend">
                     <div class="avatar-box">
-                        <img src="/assets/jellyfish.png" alt="kawaii jellyfish" class="avatar">
+                        <img src="assets/jellyfish.png" alt="kawaii jellyfish" class="avatar">
                     </div>
                     <div class="trend-info">
                         <h3>@morgan</h3>
@@ -156,7 +181,7 @@
                 </div>
                 <div class="trend">
                     <div class="avatar-box">
-                        <img src="/assets/octopus.png" alt="kawaii octopus" class="avatar">
+                        <img src="assets/octopus.png" alt="kawaii octopus" class="avatar">
                     </div>
                     <div class="trend-info">
                         <h3>@kendall</h3>
@@ -166,7 +191,7 @@
 
                 <div class="trend">
                     <div class="avatar-box">
-                        <img src="/assets/sun.png" alt="kawaii sun" class="avatar">
+                        <img src="assets/sun.png" alt="kawaii sun" class="avatar">
                     </div>
                     <div class="trend-info">
                         <h3>@alex</h3>
@@ -178,4 +203,13 @@
         </div>
 </main>
 </body>
+<script>
+    function w3_open() {
+  document.getElementById("mobile-sidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mobile-sidebar").style.display = "none";
+}
+</script>
 </html>
